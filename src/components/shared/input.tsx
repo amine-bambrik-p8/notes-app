@@ -36,14 +36,14 @@ export default function Input({
         <div className="mb-1.5 flex flex-row justify-between">
           <label
             htmlFor={name}
-            className="text-preset-4 block text-neutral-950"
+            className="text-preset-4 block text-neutral-950 dark:text-white"
           >
             {label}
           </label>
           {link}
         </div>
       )}
-      <div className="grid w-full grid-cols-1 hover:bg-neutral-50">
+      <div className="grid w-full grid-cols-1 hover:bg-neutral-50 dark:hover:bg-neutral-900">
         <input
           type={type ?? 'text'}
           placeholder={placeholder ?? ''}
@@ -56,7 +56,7 @@ export default function Input({
             ((e) => setIsInvalid(!validation?.validationFn(e.target.value)))
           }
           aria-describedby={`${name}-error`}
-          className={`text-preset-5 col-start-1 row-start-1 block w-full rounded-md border-[1px] border-neutral-300 bg-transparent py-3 text-gray-900 placeholder:text-neutral-500 focus:outline-2 focus:outline-offset-2 focus:outline-neutral-600 disabled:bg-neutral-50 ${prefix ? 'ps-11' : 'ps-4'} ${isInvalid && 'border-red-500'} `}
+          className={`text-preset-5 col-start-1 row-start-1 block w-full rounded-md border-[1px] border-neutral-300 bg-transparent py-3 text-gray-900 placeholder:text-neutral-500 focus:outline-2 focus:outline-offset-2 focus:outline-neutral-600 disabled:bg-neutral-50 dark:border-neutral-600 dark:text-neutral-100 ${prefix ? 'ps-11' : 'ps-4'} ${isInvalid && 'border-red-500'} `}
         />
         {prefix && (
           <div className="col-start-1 row-start-1 ms-4 flex flex-row justify-center self-center justify-self-start">
