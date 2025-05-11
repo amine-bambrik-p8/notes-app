@@ -5,6 +5,7 @@ export default function GoogleIcon(props: any) {
       width="24"
       height="25"
       viewBox="0 0 24 25"
+      className="dark:fill-white"
     >
       <path
         fillRule="evenodd"
