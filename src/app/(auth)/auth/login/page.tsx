@@ -35,7 +35,7 @@ export default function LoginPage() {
             label="Password"
             link={
               <Link
-                href="/forgot"
+                href="/auth/forgot-password"
                 className="text-xs leading-[1.4] tracking-normal text-neutral-600 underline dark:text-neutral-400"
               >
                 Forgot
