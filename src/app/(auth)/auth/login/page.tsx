@@ -79,7 +79,10 @@ export default function LoginPage() {
             <span className="text-neutral-600 dark:text-neutral-300">
               No account yet?
             </span>{' '}
-            <Link href="./sign-up" className="text-neutral-950 dark:text-white">
+            <Link
+              href="/auth/sign-up"
+              className="text-neutral-950 dark:text-white"
+            >
               Sign Up
             </Link>
           </p>
