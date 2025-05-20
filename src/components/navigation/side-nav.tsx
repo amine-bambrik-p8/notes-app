@@ -86,7 +86,7 @@ export function SideNav() {
   const pathname = usePathname();
   const params = useParams<{ tagId: string }>();
   return (
-    <nav className="flex h-dvh flex-col gap-y-4 border-r border-neutral-200 px-4 py-3 dark:border-neutral-800">
+    <div className="flex h-dvh flex-col gap-y-4 border-r border-neutral-200 px-4 py-3 dark:border-neutral-800">
       <div className="flex h-13 flex-row items-center">
         <Logo />
       </div>
@@ -161,6 +161,6 @@ export function SideNav() {
           </li>
         </ul>
       </nav>
-    </nav>
+    </div>
   );
 }
