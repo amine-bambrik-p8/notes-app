@@ -6,20 +6,7 @@ import TagIcon from '../shared/icons/tag';
 import HomeIcon from '../shared/icons/home';
 import ArchiveIcon from '../shared/icons/archive';
 import ChevronRightIcon from '../shared/icons/chevron-right';
-const navigation = [
-  {
-    name: 'All Notes',
-    href: '/notes',
-    icon: HomeIcon,
-    current: true,
-  },
-  {
-    name: 'Archived Notes',
-    href: '/archived-notes',
-    icon: ArchiveIcon,
-    current: false,
-  },
-];
+
 const tags = [
   {
     id: 'cooking',
