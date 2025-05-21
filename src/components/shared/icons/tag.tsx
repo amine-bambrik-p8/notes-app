@@ -1,8 +1,6 @@
 export default function TagIcon({
   className,
 }: Readonly<{ className: string }>) {
-  className = className.replaceAll(/color/gi, 'stroke');
-  console.log(className);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

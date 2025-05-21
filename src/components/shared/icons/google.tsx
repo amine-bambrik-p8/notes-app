@@ -1,11 +1,13 @@
-export default function GoogleIcon() {
+export default function GoogleIcon({
+  className,
+}: Readonly<{ className: string }>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="25"
       viewBox="0 0 24 25"
-      className="dark:fill-white"
+      className={className}
     >
       <path
         fillRule="evenodd"

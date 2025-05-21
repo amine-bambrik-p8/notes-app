@@ -61,7 +61,7 @@ export default function SignUpPage() {
           </p>
           <button className="btn btn--border justify-center" type="button">
             <div className="-ms-4 me-4">
-              <GoogleIcon aria-hidden="true" />
+              <GoogleIcon aria-hidden="true" className={'dark:fill-white'} />
             </div>
             Google
           </button>

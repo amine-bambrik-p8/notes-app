@@ -1,7 +1,6 @@
 export default function HomeIcon({
   className,
 }: Readonly<{ className: string }>) {
-  className = className.replaceAll(/color/gi, 'fill');
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

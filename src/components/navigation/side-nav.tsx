@@ -94,34 +94,58 @@ export function SideNav() {
         <ul role="list" className="flex flex-1 flex-col gap-y-2">
           <li className="border-b-1 border-neutral-200 pb-2 dark:border-neutral-800">
             <ul role="list" className="space-y-1">
-              {navigation.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className={classNames(
-                      pathname.startsWith(item.href)
-                        ? 'bg-neutral-100 text-neutral-950 dark:bg-neutral-800 dark:text-white'
-                        : 'text-neutral-700 hover:bg-neutral-100 hover:text-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:hover:text-white',
+              <li>
+                <a
+                  href="/notes"
+                  className={classNames(
+                    pathname.startsWith('/notes')
+                      ? 'bg-neutral-100 text-neutral-950 dark:bg-neutral-800 dark:text-white'
+                      : 'text-neutral-700 hover:bg-neutral-100 hover:text-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:hover:text-white',
 
-                      'group flex gap-x-2 rounded-lg px-3 py-2.5 text-sm font-medium',
+                    'group flex gap-x-2 rounded-lg px-3 py-2.5 text-sm font-medium',
+                  )}
+                >
+                  <HomeIcon
+                    aria-hidden="true"
+                    className={classNames(
+                      pathname.startsWith('/notes')
+                        ? 'fill-blue-500'
+                        : 'fill-neutral-700 group-hover:fill-blue-500 dark:fill-neutral-200',
+                      'size-5 shrink-0',
                     )}
-                  >
-                    <item.icon
-                      aria-hidden="true"
-                      className={classNames(
-                        pathname.startsWith(item.href)
-                          ? 'color-blue-500'
-                          : 'color-neutral-700 group-hover:color-blue-500 dark:color-neutral-200',
-                        'size-5 shrink-0',
-                      )}
-                    />
-                    <span className="flex-1">{item.name}</span>
-                    {pathname.startsWith(item.href) && (
-                      <ChevronRightIcon className="items-right color-neutral-950 dark:color-white size-5 shrink-0" />
+                  />
+                  <span className="flex-1">{'All Notes'}</span>
+                  {pathname.startsWith('/notes') && (
+                    <ChevronRightIcon className="items-right size-5 shrink-0 fill-neutral-950 dark:fill-white" />
+                  )}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={'/archived-notes'}
+                  className={classNames(
+                    pathname.startsWith('/archived-notes')
+                      ? 'bg-neutral-100 text-neutral-950 dark:bg-neutral-800 dark:text-white'
+                      : 'text-neutral-700 hover:bg-neutral-100 hover:text-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:hover:text-white',
+
+                    'group flex gap-x-2 rounded-lg px-3 py-2.5 text-sm font-medium',
+                  )}
+                >
+                  <ArchiveIcon
+                    aria-hidden="true"
+                    className={classNames(
+                      pathname.startsWith('/archived-notes')
+                        ? 'stroke-blue-500'
+                        : 'stroke-neutral-700 group-hover:stroke-blue-500 dark:stroke-neutral-200',
+                      'size-5 shrink-0',
                     )}
-                  </a>
-                </li>
-              ))}
+                  />
+                  <span className="flex-1">Archived Notes</span>
+                  {pathname.startsWith('/archived-notes') && (
+                    <ChevronRightIcon className="items-right size-5 shrink-0 fill-neutral-950 dark:fill-white" />
+                  )}
+                </a>
+              </li>
             </ul>
           </li>
           <li>
@@ -144,15 +168,15 @@ export function SideNav() {
                       <TagIcon
                         className={classNames(
                           tag.id === params.tagId
-                            ? 'color-blue-500'
-                            : 'color-neutral-700 group-hover:color-blue-500 dark:color-neutral-200',
+                            ? 'stroke-blue-500'
+                            : 'stroke-neutral-700 group-hover:stroke-blue-500 dark:stroke-neutral-200',
                           'size-5 shrink-0',
                         )}
                       />
                       <span className="truncate">{tag.name}</span>
                     </div>
                     {tag.id === params.tagId && (
-                      <ChevronRightIcon className="color-neutral-950 dark:color-white size-5 shrink-0 self-end" />
+                      <ChevronRightIcon className="size-5 shrink-0 self-end fill-neutral-950 dark:fill-white" />
                     )}
                   </a>
                 </li>
