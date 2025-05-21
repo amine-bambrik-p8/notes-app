@@ -1,3 +1,4 @@
+import { MenuBar } from '@/components/navigation/menu-bar';
 import { SideNav } from '@/components/navigation/side-nav';
 
 export default function SidebarLayout({
@@ -14,6 +15,10 @@ export default function SidebarLayout({
       {/* Content */}
       <div className="flex-1 overflow-y-auto max-md:rounded-t-xl">
         {children}
+      </div>
+      {/* Bottom Menubar */}
+      <div className="md:hidden">
+        <MenuBar></MenuBar>
       </div>
     </div>
   );
