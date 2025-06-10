@@ -1,7 +1,7 @@
 'use client';
 
-import { InformationCircleIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
+import InfoIcon from './icons/info';
 
 interface Props<T = string> {
   type?: string;
@@ -72,9 +72,9 @@ export default function Input({
       {validation?.hint && (
         <p
           id={`${name}-error`}
-          className={`text-preset-6 mt-2 flex flex-row items-center ${isInvalid ? 'text-red-600' : ''}`}
+          className={`text-preset-6 mt-2 flex flex-row items-center text-neutral-600 dark:text-neutral-600 ${isInvalid ? 'text-red-600' : ''}`}
         >
-          <InformationCircleIcon className="mr-2 size-4" />
+          <InfoIcon className="mr-2 size-4 stroke-neutral-700 dark:stroke-neutral-400" />
           <span>{validation?.hint}</span>
         </p>
       )}
