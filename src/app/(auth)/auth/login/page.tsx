@@ -1,6 +1,6 @@
 'use client';
-import { EyeIcon } from '@heroicons/react/24/outline';
 import GoogleIcon from '@/components/shared/icons/google';
+import ShowPasswordIcon from '@/components/shared/icons/show-password';
 import Input from '@/components/shared/input';
 import Logo from '@/components/shared/logo';
 import Link from 'next/link';
@@ -46,7 +46,10 @@ export default function LoginPage() {
                 type="button"
                 className="cursor-pointer bg-transparent text-neutral-500 focus:outline-2 focus:outline-neutral-600 disabled:text-neutral-300 dark:disabled:text-neutral-700"
               >
-                <EyeIcon aria-hidden="true" className="size-5" />
+                <ShowPasswordIcon
+                  aria-hidden="true"
+                  className="size-5 fill-neutral-700 dark:fill-neutral-400"
+                />
               </button>
             }
           />
