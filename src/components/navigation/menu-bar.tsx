@@ -7,6 +7,7 @@ import TagIcon from '../shared/icons/tag';
 import ArchiveIcon from '../shared/icons/archive';
 import SearchIcon from '../shared/icons/search';
 import SettingsIcon from '../shared/icons/settings';
+import Link from 'next/link';
 
 export function MenuBar() {
   const pathname = usePathname();
@@ -15,7 +16,7 @@ export function MenuBar() {
       aria-label="Tabs"
       className="bor xs:h-18.5 isolate flex h-14 justify-center divide-x divide-neutral-100 border-t-1 border-t-neutral-200 px-4 py-3 shadow-md dark:divide-neutral-800 dark:border-t-neutral-800"
     >
-      <a
+      <Link
         href="/notes"
         aria-current="page"
         className={classNames(
@@ -41,8 +42,8 @@ export function MenuBar() {
           ></HomeIcon>
           <span className="xs:block text-preset-5 hidden">Home</span>
         </div>
-      </a>
-      <a
+      </Link>
+      <Link
         href="/search"
         className={classNames(
           'group flex min-w-0 grow items-center justify-center overflow-hidden',
@@ -67,8 +68,8 @@ export function MenuBar() {
           ></SearchIcon>
           <span className="xs:block text-preset-5 hidden">Search</span>
         </div>
-      </a>
-      <a
+      </Link>
+      <Link
         href="/archived-notes"
         className={classNames(
           'group flex min-w-0 grow items-center justify-center overflow-hidden',
@@ -93,8 +94,8 @@ export function MenuBar() {
           ></ArchiveIcon>
           <span className="xs:block text-preset-5 hidden">Archived</span>
         </div>
-      </a>
-      <a
+      </Link>
+      <Link
         href="/tags"
         className={classNames(
           'group flex min-w-0 grow items-center justify-center overflow-hidden',
@@ -119,8 +120,8 @@ export function MenuBar() {
           ></TagIcon>
           <span className="xs:block text-preset-5 hidden">Tags</span>
         </div>
-      </a>
-      <a
+      </Link>
+      <Link
         href="/settings"
         className={classNames(
           'group flex min-w-0 grow items-center justify-center overflow-hidden',
@@ -145,7 +146,7 @@ export function MenuBar() {
           ></SettingsIcon>
           <span className="xs:block text-preset-5 hidden">Settings</span>
         </div>
-      </a>
+      </Link>
     </nav>
   );
 }
